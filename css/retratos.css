@@ -1,0 +1,135 @@
+/*codigo general de toda la pag*/
+body{
+  font-family:"Dancing Script";
+  background-color: black;
+  animation: slidein 2s;
+}
+@-webkit-keyframes slidein{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/*codigo de cabecera*/
+header{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+header h1{
+  color:white;
+  text-shadow: 2px 2px 2px #02010a;
+  font-size: 200%;
+}
+.menu{
+  font-size: 190%;
+}
+
+/*links*/
+.links{
+  text-decoration: none;
+  color: red;
+  margin-right: 0.5%;
+}
+a:hover{
+  color:blue;
+}
+
+/*galeria*/
+
+#galeria1 img:nth-child(even){
+  -webkit-filter:grayscale(100%);
+}
+#galeria2 img:nth-child(odd){
+  -webkit-filter:grayscale(100%);
+}
+#galeria1 img:first-child{
+  -webkit-filter:blur(10px);
+}
+#galeria1 img:last-child{
+  -webkit-filter:sepia(90%);
+}
+.galeria{
+  display: flex;
+  background-color: #d5c75f;
+  flex-wrap: nowrap;
+}
+.galeria img{
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/*responsive*/
+@media (max-width: 899px){
+  header h1{
+    text-align: center;
+  }
+  .menu{
+    text-align: center;
+  }
+  #pieDePag{
+    flex-direction: column;
+    text-align: center;
+  }
+  .all{
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  .imgFooter{
+    width: 4%;
+  }
+  .galeria{
+    flex-direction: column;
+  }
+  .galeria img{
+    width: 60%;
+  }
+}
+@media (min-width:900px){
+  header h1{
+    text-align: left;
+  }
+  .menu{
+    text-align: right;
+  }
+  #pieDePag{
+    flex-direction: row;
+  }
+  .all{
+    width: 900px;
+    margin: auto;
+    display: block;
+  }
+  .imgFooter{
+    width: 10%;
+  }
+  .galeria{
+    flex-direction: row;
+  }
+  .galeria img{
+    width: 30%;
+    height: 20%;
+  }
+}
+
+/*codigo de pie de pag*/
+#pieDePag{
+  width: 96%;
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  padding-left: 4%;
+}
+footer p{
+  flex-grow: 2;
+  flex-basis: 5%;
+}
